@@ -3,11 +3,13 @@
 one:
   name: MyString
   location: MyString
-  message: MyText
-  user: 
+  text: MyText
+  user_name: John Doe
+  user_id: 1
 
 two:
   name: MyString
   location: MyString
-  message: MyText
-  user: 
+  text: MyText
+  user_name: Mary Smith
+  user_id: 2

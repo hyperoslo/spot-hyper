@@ -24,11 +24,9 @@ class SpotsController < ApplicationController
 
   # POST /spots
   def create
-    puts params
     render nothing: true, status: :ok and return unless responder.respond?
     @spot = Spot.new(spot_params)
     if params[:text].present? && @spot.save
-      AddBackgroundJob.perform_later(@spot.id)
       render text: responder.response.to_s
     else
       render text: "Please add a text command: /say [text]"

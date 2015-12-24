@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server
 gem 'puma'
 
+# Background jobs
 gem 'sidekiq'
 
 # Use ActiveModel has_secure_password
