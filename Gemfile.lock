@@ -45,6 +45,8 @@ GEM
       method_source
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     arel (7.0.0)
     builder (3.2.2)
     byebug (8.2.1)
@@ -179,6 +181,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 3.4)
   byebug
   coffee-rails (~> 4.1.0)
   figaro
