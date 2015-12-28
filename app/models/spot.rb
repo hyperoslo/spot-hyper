@@ -1,5 +1,5 @@
 class Spot < ApplicationRecord
-  after_commit_create :create_tags
+  before_create :create_tags
 
   def has_tags?
     text.scan(/\B#\w+/).length > 0
