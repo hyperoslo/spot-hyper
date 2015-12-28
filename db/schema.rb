@@ -13,13 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20160104070228) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "spots", force: :cascade do |t|
     t.string   "name"
     t.text     "text"
     t.string   "user_name"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "tags",       default: [],              array: true
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

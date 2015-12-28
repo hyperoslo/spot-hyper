@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta1', '< 5.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -26,7 +26,7 @@ gem 'puma'
 gem 'sidekiq'
 
 # Tagging
-gem 'acts-as-taggable-on', '~> 3.4'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

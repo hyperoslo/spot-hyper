@@ -5,6 +5,7 @@ class CreateSpots < ActiveRecord::Migration[5.0]
       t.text :text
       t.string :user_name
       t.integer :user_id
+      t.text :tags, array: true, default: []
       t.timestamps
     end
   end
