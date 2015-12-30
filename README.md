@@ -1,24 +1,24 @@
-## README
+# Spot Hyper
+Spot Hyper shares where you are and what you working on in realtime with other team members, right from any slack channel. Spot Hyper runs Rails 5.0.0 Beta on Ruby 2.3.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
+```
+/spotme [message with hashtags]
+Example: /spotme Working on #myshop #oslo #office
+```
 
-Things you may want to cover:
+## System dependencies
 
-* Ruby version
+Spot Hyper requires the following softwares:
 
-* System dependencies
+* Ruby (2.3)
+* PostgreSQL (9.4.5)
 
-* Configuration
+The versions listed are tested and confirmed to work, but the software may also be
+compatible with earlier versions.
 
-* Database creation
+### Running
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+	$ bundle exec rails db:create db:migrate
+  $ bundle exec rails console
+  $ bundle exec rails s
