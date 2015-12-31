@@ -146,6 +146,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     redis (3.2.2)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     sidekiq (4.0.1)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -190,6 +192,7 @@ DEPENDENCIES
   pg
   puma
   rails (>= 5.0.0.beta1, < 5.1)
+  redis-namespace
   sidekiq
   turbolinks
   tzinfo-data
