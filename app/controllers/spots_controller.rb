@@ -4,7 +4,7 @@ class SpotsController < ApplicationController
 
   # GET /spots
   def index
-    @spots = Spot.all.order("RANDOM()")
+    @spots = Spot.order(id: :desc)
     respond_to do |format|
       format.html
     end
@@ -14,7 +14,7 @@ class SpotsController < ApplicationController
  def user
   if params[:command].present?
     @spots = Spot.where(user_id: params[:user_id]).order(id: :desc)
-    render text: "*Here are your past spots:* \n" + @spots.map{
+    render plain: "*Here are your past spots:* \n" + @spots.map{
       |p|  "#{p.id}. " + p.text.delete("\n")
     }.join("\n")
   else
@@ -27,9 +27,9 @@ class SpotsController < ApplicationController
     render nothing: true, status: :ok and return unless responder.respond?
     @spot = Spot.new(spot_params)
     if params[:text].present? && @spot.save
-      render text: responder.response.to_s
+      render plain: responder.response.to_s
     else
-      render text: "Please add a text command: /say [text]"
+      render plain: "Please add a message to your command: /spotme [message]"
     end
 
   end
