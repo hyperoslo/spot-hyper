@@ -1,7 +1,5 @@
-<% @spots.each do |spot| %>
-  <ul>
-    <li>
-      <%= spot.user_name %> was <%= spot.text %>
-    </li>
-  </ul>
-<% end %>
+<ul id="spots">
+  <% @spots.each do |spot| %>
+    <%= render partial: 'spots/spot', locals: {spot: spot} %>
+  <% end %>
+</ul>
