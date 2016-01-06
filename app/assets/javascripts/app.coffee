@@ -3,6 +3,7 @@ window.App ||= {}
 App.scrolledToBottom = ->
   $(window).scrollTop() > $(document).height() - $(window).height() - 200
 
+# TODO
 App.loadMoreSpots = ->
   $ ->
     $('.timeline').infinitePages

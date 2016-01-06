@@ -52,7 +52,6 @@ class SpotsController < ApplicationController
 
   private
 
-    # Only allow a trusted parameter "white list" through.
     def spot_params
       params.permit(:user_id, :user_name, :text, :channel_name)
     end
