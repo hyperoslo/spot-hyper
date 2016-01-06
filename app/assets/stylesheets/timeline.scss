@@ -21,6 +21,15 @@
   padding: 1em 0 3em 0;
   margin-top: 0;
   margin-bottom: 2em;
+  .reset {
+    position: absolute;
+    left: calc(50% - 15px);
+    font-size: 12px;
+    top: -50px;
+    img {
+      width: 30px;
+    }
+  }
   &::before {
     content: '';
     position: absolute;
