@@ -47,8 +47,8 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Action Cable endpoint configuration
-  config.action_cable.url = 'wss://spot.hyper.no/cable'
-  config.action_cable.allowed_request_origins = [ 'https://spot.hyper.no', /http:\/\/localhost.*/ ]
+  config.action_cable.url = 'ws://spot.hyper.no/cable'
+  config.action_cable.allowed_request_origins = [ 'http://spot.hyper.no', /http:\/\/localhost.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   #config.force_ssl = true
