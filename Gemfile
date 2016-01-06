@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'sass-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -27,6 +29,22 @@ gem 'sidekiq'
 
 # Redis namespace
 gem 'redis-namespace'
+
+# Localtime
+gem 'local_time'
+
+# Group records
+gem 'groupdate'
+
+# Pagination
+gem 'will_paginate'
+
+# Caching
+gem 'readthis'
+gem 'hiredis' # Highly recommended
+
+# Infinite scroll
+gem 'jquery-infinite-pages'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
