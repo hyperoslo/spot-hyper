@@ -50,11 +50,18 @@
     }
   }
   @media (max-width: 580px) {
-    .brand-description {
-      max-width: 100%;
+    .logo {
+      width: 30%;
       float: none;
+      margin: 0 auto;
+    }
+    .brand-description {
+      max-width: 80%;
+      float: none;
+      margin: 0 auto;
       padding-top: 10px;
       clear: both;
+      text-align: center;
     }
     .filters {
       float: none;
