@@ -46,6 +46,9 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.0.0)
+    autoprefixer-rails (6.2.3)
+      execjs
+      json
     builder (3.2.2)
     byebug (8.2.1)
     celluloid (0.17.2)
@@ -203,6 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   byebug
   coffee-rails (~> 4.1.0)
   figaro
