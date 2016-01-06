@@ -30,7 +30,9 @@ body {
 	}
 }
 @media (max-width: 580px) {
-	background-size: cover;
+	body {
+		background-size: cover;
+	}
 }
 .container {
   max-width: 1170px;
