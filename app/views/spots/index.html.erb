@@ -1,5 +1,5 @@
-<ul id="spots">
-  <% @spots.each do |spot| %>
-    <%= render partial: 'spots/spot', locals: {spot: spot} %>
-  <% end %>
-</ul>
+<div class="timeline-container center top-circle">
+  <section class="timeline">
+    <%= render partial: 'spots/spots', locals: {grouped_spots: @grouped_spots} %>
+  </section>
+</div>

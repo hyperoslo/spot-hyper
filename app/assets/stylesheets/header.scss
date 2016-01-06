@@ -1,0 +1,47 @@
+/*
+  Module: Header
+*/
+
+.header{
+  position: relative;
+  display: block;
+  height: 60px;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 800;
+  a {
+    color: #fff;
+  }
+  .logo {
+    width: 30%;
+    float: left;
+  }
+  .brand {
+    max-width: 120px;
+    width: 100px;
+  }
+
+  .brand-description {
+    max-width: 50%;
+    float: left;
+    padding-top: 10px;
+    h3 {
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+  .filters {
+    float: right;
+    padding-top: 10px;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+            text-decoration: none;
+        }
+      }
+    }
+  }
+}

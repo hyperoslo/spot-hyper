@@ -8,5 +8,6 @@ class CreateSpots < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     add_index  :spots, :tags, using: 'gin'
+    add_index  :spots, :created_at
   end
 end

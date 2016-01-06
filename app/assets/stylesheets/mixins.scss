@@ -1,0 +1,20 @@
+/*
+	Module: Mixines
+*/
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+	box-sizing: $boxmodel;
+}
+
+@mixin translate($x, $y) {
+	transform: translate($x, $y);
+}
+
+@mixin transition($transition) {
+	transition: $transition;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}

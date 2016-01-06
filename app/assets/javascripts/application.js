@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require local_time
+//= require jquery.infinite-pages
 //= require turbolinks
 //= require_tree .

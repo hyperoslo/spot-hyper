@@ -1,0 +1,42 @@
+/*
+  Module: Layout
+*/
+
+@import 'fonts';
+
+body {
+	background-image: asset-url('bg_hyper.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: $base-font-family;
+	line-height: 1.2;
+	font-weight: 400;
+	font-size: 18px;
+	height: 100%;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	white-space: normal;
+	&:before {
+		content: '';
+		background: rgba(68, 68, 68, 0.7) top right no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-attachment: fixed;
+	}
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.container-fluid {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.full-height{
+  height: 100% !important;
+}

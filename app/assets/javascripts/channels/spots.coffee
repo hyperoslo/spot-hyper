@@ -6,4 +6,4 @@ App.relay = App.cable.subscriptions.create "SpotsChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('#spots').prepend(data.message)
+    $(data.message).insertBefore($('#today .timeline-block:first'))

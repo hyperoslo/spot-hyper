@@ -1,0 +1,49 @@
+/*
+	Module: Fonts
+*/
+
+
+/* Proxima Nova @font-face kit */
+/* BEGIN Light */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: asset-url('proxima-nova/proxima_nova_alt_light-webfont.eot');
+  src: asset-url('proxima-nova/proxima_nova_alt_light-webfont.eot?#iefix') format('embedded-opentype'), asset-url('proxima-nova/proxima_nova_alt_light-webfont.woff') format('woff'), asset-url('proxima-nova/proxima_nova_alt_light-webfont.ttf') format('truetype'), asset-url('proxima-nova/proxima_nova_alt_light-webfont.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* / End Light */
+
+/* BEGIN Regular */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: asset-url('proxima-nova/proxima_nova_alt_reg-webfont.eot');
+  src: asset-url('proxima-nova/proxima_nova_alt_reg-webfont.eot?#iefix') format('embedded-opentype'), asset-url('proxima-nova/proxima_nova_alt_reg-webfont.woff') format('woff'), asset-url('proxima-nova/proxima_nova_alt_reg-webfont.ttf') format('truetype'), asset-url('proxima-nova/proxima_nova_alt_reg-webfont.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+/* End Regular */
+
+
+/* BEGIN Regular Italic */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.eot');
+  src: asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.eot?#iefix') format('embedded-opentype'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.woff') format('woff'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.ttf') format('truetype'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.svg') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+/* End Regular Italic */
+
+/* BEGIN Bold */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.eot');
+  src: asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.eot?#iefix') format('embedded-opentype'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.woff') format('woff'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.ttf') format('truetype'), asset-url('proxima-nova/proxima_nova_alt_reg_it-webfont.svg') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+/* End Bold */
+
+$base-font-family: "Proxima Nova", Helvetica, Arial, sans-serif;

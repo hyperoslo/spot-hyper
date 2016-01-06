@@ -4,9 +4,18 @@ class SpotsController < ApplicationController
 
   # GET /spots
   def index
-    @spots = Spot.order(id: :desc)
+    @grouped_spots =
+    if params[:name]
+      Spot.where(user_name: params[:name]).to_a.group_by_day(&:created_at).sort.reverse
+    elsif params[:tag]
+      Spot.where("'#{params[:tag]}' = ANY (tags)").to_a.group_by_day(&:created_at).sort.reverse
+    else
+      Spot.all.to_a.group_by_day(&:created_at).sort.reverse
+    end
+
     respond_to do |format|
       format.html
+      format.js
     end
   end
 
@@ -19,6 +28,13 @@ class SpotsController < ApplicationController
     }.join("\n")
   else
     render nothing: true, status: :forbidden
+  end
+ end
+
+ def show
+  @grouped_spots = Spot.where(user_name: params[:id]).order(id: :desc).to_a.group_by_day(&:created_at).sort.reverse
+  respond_to do |format|
+    format.html {render :index}
   end
  end
 
@@ -38,7 +54,7 @@ class SpotsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def spot_params
-      params.permit(:user_id, :user_name, :text)
+      params.permit(:user_id, :user_name, :text, :channel_name)
     end
 
     # Setup slack responder
