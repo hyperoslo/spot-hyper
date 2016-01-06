@@ -17,8 +17,11 @@ Spot Hyper requires the following softwares:
 The versions listed are tested and confirmed to work, but the software may also be
 compatible with earlier versions.
 
+## TODO
+* Pagination - infinite scroll
+* More filter option - day wise  
 ### Running
 
 	$ bundle exec rails db:create db:migrate
 	$ bundle exec rails console
-	$ bundle exec rails s
+	$ ./start from terminal
