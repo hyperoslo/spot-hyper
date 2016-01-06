@@ -29,6 +29,9 @@ body {
     background-attachment: fixed;
 	}
 }
+@media (max-width: 580px) {
+	background-size: cover;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
