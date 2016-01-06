@@ -49,4 +49,19 @@
       }
     }
   }
+  @media (max-width: 580px) {
+    .brand-description {
+      max-width: 100%;
+      float: none;
+      padding-top: 10px;
+      clear: both;
+    }
+    .filters {
+      float: none;
+      margin-top: 20px;
+      clear: both;
+      display: block;
+      text-align: center;
+    }
+  }
 }

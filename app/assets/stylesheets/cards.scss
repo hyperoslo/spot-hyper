@@ -51,6 +51,11 @@
       margin-top: 5px;
     }
   }
+	@media (max-width: 580px) {
+		.card-description {
+			font-size: 22px;
+		}
+	}
   .card-content{
     position: relative;
   }
