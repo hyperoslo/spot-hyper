@@ -1,5 +1,3 @@
-require 'action_cable_middleware'
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -48,10 +46,8 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
-  config.middleware.use ActionCableMiddleWare
-
   # Action Cable endpoint configuration
-  config.action_cable.url = 'wss://infinite-cliffs-2020.herokuapp.com/'
+  config.action_cable.url = 'wss://infinite-cliffs-2020.herokuapp.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
