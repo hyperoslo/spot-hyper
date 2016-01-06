@@ -20,5 +20,5 @@ compatible with earlier versions.
 ### Running
 
 	$ bundle exec rails db:create db:migrate
-  $ bundle exec rails console
-  $ bundle exec rails s
+	$ bundle exec rails console
+	$ bundle exec rails s
