@@ -3,10 +3,6 @@ class Spot < ApplicationRecord
   before_create :create_tags, :cleanup_text
   after_create_commit { UpdateStatusJob.perform_later(self) unless new_today? }
 
-  def day
-    self.created_at
-  end
-
   def has_tags?
     text.scan(/\B#\w+/).length > 0
   end
@@ -18,6 +14,8 @@ class Spot < ApplicationRecord
   def create_tags
     self.tags = text.scan(/\B#\w+/).map{ |tag| tag.gsub('#', '') } if has_tags?
   end
+
+  private
 
   def new_today?
     Spot.where("created_at >= ?", Time.zone.now.beginning_of_day).blank?
