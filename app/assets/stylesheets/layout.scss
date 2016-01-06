@@ -18,6 +18,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-style: normal;
 	white-space: normal;
+	background-size: cover;
 	&:before {
 		content: '';
 		background: rgba(68, 68, 68, 0.7) top right no-repeat;
@@ -27,11 +28,6 @@ body {
     top: 0;
     bottom: 0;
     background-attachment: fixed;
-	}
-}
-@media (max-width: 580px) {
-	body {
-		background-size: cover;
 	}
 }
 .container {
