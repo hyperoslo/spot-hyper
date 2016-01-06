@@ -31,13 +31,6 @@ class SpotsController < ApplicationController
   end
  end
 
- def show
-  @grouped_spots = Spot.where(user_name: params[:id]).order(id: :desc).to_a.group_by_day(&:created_at).sort.reverse
-  respond_to do |format|
-    format.html {render :index}
-  end
- end
-
   # POST /spots
   def create
     render nothing: true, status: :ok and return unless responder.respond?
