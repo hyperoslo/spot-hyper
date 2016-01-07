@@ -8,7 +8,7 @@
           <% end %>
         </div>
       <% end %>
-      <% cache(['spots', Spot.count, Spot.maximum(:updated_at).try(:utc).try(:to_s, :number)]) do %>
+      <% cache(['spots', Spot.count, Spot.maximum(:updated_at).try(:utc).try(:to_s, :number), params[:name], params[:tag]]) do %>
         <%= render partial: 'spots/spots', locals: {grouped_spots: @grouped_spots} %>
       <% end %>
     </section>
