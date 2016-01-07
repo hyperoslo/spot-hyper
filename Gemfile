@@ -34,10 +34,6 @@ gem 'groupdate'
 gem 'readthis'
 gem 'hiredis' # Highly recommended
 
-gem 'rack-cache'
-gem 'redis-store'
-gem 'redis-rack-cache'
-
 # Autoprefixer
 gem 'autoprefixer-rails'
 
