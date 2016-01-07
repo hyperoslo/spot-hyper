@@ -39,6 +39,8 @@ gem 'hiredis' # Highly recommended
 
 gem 'rack-cache'
 
+gem 'redis-rails'
+
 # Infinite scroll
 gem 'jquery-infinite-pages'
 

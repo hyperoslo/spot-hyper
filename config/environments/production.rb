@@ -22,12 +22,12 @@ Rails.application.configure do
     redis: { url: ENV.fetch('REDIS_URL'), driver: :hiredis }
   }
 
-  config.middleware.use Rack::Cache,
-   :verbose => true,
-   :metastore   => ENV.fetch('REDIS_URL'),
-   :entitystore => ENV.fetch('REDIS_URL')
+  config.action_dispatch.rack_cache = {
+    metastore:   ENV.fetch('REDIS_URL') + '/metastore',
+    entitystore: ENV.fetch('REDIS_URL') + '/entitystore'
+  }
 
-  config.static_cache_control = "public, max-age=2592000"
+  config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=2592000' }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
