@@ -3,6 +3,8 @@
     <div class="span">
       <h3><%=  local_relative_time(date, 'weekday') %></h3>
     </div>
-    <%= render partial: 'spots/spot', collection: spots %>
+    <% cache(@spot) do %>
+      <%= render partial: 'spots/spot', collection: spots %>
+    <% end %>
   </div>
 <% end %>
