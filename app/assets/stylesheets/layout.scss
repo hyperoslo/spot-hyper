@@ -33,6 +33,12 @@ body {
     background-attachment: fixed;
 	}
 }
+@media (max-width: 580px) {
+	body {
+		background-image: none;
+		background-attachment:scroll;
+	}
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;

@@ -26,6 +26,7 @@
     left: calc(50% - 15px);
     font-size: 12px;
     top: -50px;
+    display: block;
     img {
       width: 30px;
     }
@@ -176,6 +177,9 @@
   .timeline {
     &::before {
       content: none;
+    }
+    .reset {
+      top: 5px;
     }
     .timespan {
       &:first-of-type {
