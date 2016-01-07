@@ -30,9 +30,6 @@ gem 'local_time'
 # Group records
 gem 'groupdate'
 
-# Pagination
-gem 'will_paginate'
-
 # Caching
 gem 'readthis'
 gem 'hiredis' # Highly recommended
@@ -40,9 +37,6 @@ gem 'hiredis' # Highly recommended
 gem 'rack-cache'
 gem 'redis-store'
 gem 'redis-rack-cache'
-
-# Infinite scroll
-gem 'jquery-infinite-pages'
 
 # Autoprefixer
 gem 'autoprefixer-rails'
