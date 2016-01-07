@@ -179,7 +179,12 @@
       content: none;
     }
     .reset {
-      top: 5px;
+      margin: 0 auto;
+      width: 50px;
+      top: auto;
+      padding: 10px 0;
+      left: auto;
+      position: relative;
     }
     .timespan {
       padding-top: 25px;
