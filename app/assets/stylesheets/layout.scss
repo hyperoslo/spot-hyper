@@ -37,6 +37,10 @@ body {
 	body {
 		background-image: none;
 		background-attachment:scroll;
+		background-color: rgba(68, 68, 68, 0.7);
+		&:before {
+			content: none;
+		}
 	}
 }
 .container {
