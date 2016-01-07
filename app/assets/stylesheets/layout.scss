@@ -43,6 +43,15 @@ body {
 		}
 	}
 }
+.no-content {
+  max-width: 170px;
+  margin: 0 auto;
+  font-size: 40px;
+  padding: 150px 0;
+  color: #f57d2d;
+  z-index: 1020;
+  position: relative;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
