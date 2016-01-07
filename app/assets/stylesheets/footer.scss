@@ -6,3 +6,9 @@
 	padding: 20px 0;
 	text-align: center;
 }
+
+@media (max-width: 580px) {
+	.footer {
+		color: #fff;
+	}
+}
