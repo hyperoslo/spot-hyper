@@ -38,9 +38,8 @@ gem 'readthis'
 gem 'hiredis' # Highly recommended
 
 gem 'rack-cache'
-
 gem 'redis-store'
-gem 'redis-activesupport'
+gem 'redis-rack-cache'
 
 # Infinite scroll
 gem 'jquery-infinite-pages'

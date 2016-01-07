@@ -163,11 +163,11 @@ GEM
       connection_pool (~> 2.1)
       redis (~> 3.0)
     redis (3.2.2)
-    redis-activesupport (4.1.5)
-      activesupport (>= 3, < 5)
-      redis-store (~> 1.1.0)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    redis-rack-cache (1.2.3)
+      rack-cache (~> 1.2)
+      redis-store (~> 1.1.0)
     redis-store (1.1.7)
       redis (>= 2.2)
     sass (3.4.20)
@@ -229,8 +229,8 @@ DEPENDENCIES
   rails (>= 5.0.0.beta1, < 5.1)
   rails_12factor
   readthis
-  redis-activesupport
   redis-namespace
+  redis-rack-cache
   redis-store
   sass-rails
   sidekiq
