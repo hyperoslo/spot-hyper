@@ -49,7 +49,25 @@
       }
     }
   }
-  @media (max-width: 580px) {
+
+  @media (max-width: 800px) {
+    .logo {
+      width: 30%;
+      float: left;
+    }
+    .brand-description {
+      max-width: 40%;
+      float: left;
+      padding-top: 10px;
+      text-align: center;
+    }
+    .filters {
+      float: none;
+      padding-top: 10px;
+      text-align: right;
+    }
+  }
+  @media (max-width: 620px) {
     .logo {
       width: 30%;
       float: none;
