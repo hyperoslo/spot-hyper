@@ -1,9 +1,11 @@
 <div class="header">
   <div class="container-fluid relative">
     <div class="logo">
-      <div class="brand">
-        <%= image_tag('hyper_logo.svg') %>
-      </div>
+      <%= link_to(root_path) do %>
+        <div class="brand">
+          <%= image_tag('hyper_logo.svg') %>
+        </div>
+      <% end %>
     </div>
     <div class="brand-description">
       <h3>Share where you are and what you working on with team via Slack</h3>
