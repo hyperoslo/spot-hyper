@@ -40,6 +40,7 @@ gem 'hiredis' # Highly recommended
 gem 'rack-cache'
 
 gem 'redis-rails'
+gem 'redis-activesupport'
 
 # Infinite scroll
 gem 'jquery-infinite-pages'
