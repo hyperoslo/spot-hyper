@@ -4,6 +4,9 @@
 
 @import 'fonts';
 
+html, body {
+  text-rendering: optimizeLegibility;
+}
 body {
 	background-image: asset-url('hyper-team.jpg');
 	background-attachment: fixed;
