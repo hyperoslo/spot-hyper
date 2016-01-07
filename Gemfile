@@ -39,7 +39,7 @@ gem 'hiredis' # Highly recommended
 
 gem 'rack-cache'
 
-gem 'redis-rails'
+gem 'redis-store'
 gem 'redis-activesupport'
 
 # Infinite scroll
