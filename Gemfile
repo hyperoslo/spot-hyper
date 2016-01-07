@@ -37,6 +37,8 @@ gem 'will_paginate'
 gem 'readthis'
 gem 'hiredis' # Highly recommended
 
+gem 'rack-cache'
+
 # Infinite scroll
 gem 'jquery-infinite-pages'
 

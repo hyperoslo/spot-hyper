@@ -123,6 +123,8 @@ GEM
     puma (2.15.3)
     rack (2.0.0.alpha)
       json
+    rack-cache (1.5.1)
+      rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.beta1)
@@ -219,6 +221,7 @@ DEPENDENCIES
   local_time
   pg
   puma
+  rack-cache
   rails (>= 5.0.0.beta1, < 5.1)
   rails_12factor
   readthis
