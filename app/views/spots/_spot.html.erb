@@ -5,12 +5,14 @@
   <div class="timeline-content">
     <div class="card full-width">
       <div class="card-header">
-        <h5><%= local_time_ago(spot.created_at) %></h5>
+        <h5>
+          <%= local_time_ago(spot.created_at) %>
+        </h5>
       </div>
       <div class="card-description">
         <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + spot.text %>
         <% spot.tags.each do |tag| %>
-          <%= link_to('#' + tag, spots_path(tag: tag)) %>
+          <%= link_to('#' + tag, spots_path(tag: tag), class: 'tag') %>
         <% end %>
         <div class="via">
           via <%= spot.channel_name.capitalize %> On Slack
