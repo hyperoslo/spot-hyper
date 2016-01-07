@@ -173,6 +173,19 @@
   }
 }
 
+@media (max-width: 800px) {
+  .timeline {
+    .timespan {
+      padding-top: 100px;
+      &:first-of-type {
+        .span {
+          top: -80px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 620px) {
   .timeline {
     &::before {

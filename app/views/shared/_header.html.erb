@@ -25,6 +25,11 @@
               class: "#{current_page?(spots_path(tag: 'office')) ? 'active' : ''}")
           %>
        <% end %>
+       <%= content_tag :li do %>
+         <%= link_to('Sick', spots_path(tag: 'sick'),
+           class: "#{current_page?(spots_path(tag: 'sick')) ? 'active' : ''}")
+         %>
+       <% end %>
       <% end %>
     </div>
   </div>
