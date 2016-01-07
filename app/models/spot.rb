@@ -1,5 +1,5 @@
 class Spot < ApplicationRecord
-  default_scope { order(created_at: :desc) }
+  default_scope { where("created_at >= ?", 2.days.ago.utc).order(created_at: :desc) }
   before_create :create_tags, :cleanup_text
   after_create_commit { UpdateStatusJob.perform_later(self) unless new_today? }
 
