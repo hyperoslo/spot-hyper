@@ -18,7 +18,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  <body>
+  <body onload="load()">
     <%= render partial: 'shared/header' %>
     <div class="container">
       <%= yield %>

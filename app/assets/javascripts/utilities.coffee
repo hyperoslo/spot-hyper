@@ -1,4 +1,10 @@
-$(document).ready ->
-  window.addEventListener 'hashchange', ->
-    scrollBy 0, -50
-    return
+shiftWindow = ->
+  scrollBy 0, -50
+  return
+
+load = ->
+  if window.location.hash
+    shiftWindow()
+  return
+
+window.addEventListener 'hashchange', shiftWindow
