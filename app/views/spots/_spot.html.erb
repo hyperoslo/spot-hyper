@@ -10,10 +10,7 @@
         </h5>
       </div>
       <div class="card-description">
-        <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + spot.text %>
-        <% spot.tags.each do |tag| %>
-          <%= link_to('#' + tag, spots_path(tag: tag), class: 'tag') %>
-        <% end %>
+        <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + render_with_hashtags(spot.text).html_safe %>
         <div class="via">
           via <%= spot.channel_name.capitalize %> On Slack
         </div>

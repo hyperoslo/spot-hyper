@@ -10,4 +10,12 @@ module SpotsHelper
       date.strftime("dd.mm.")
     end
   end
+
+  def render_with_hashtags(text)
+    sanitize(text.gsub(/(?:#(\w+))/) {hashtag_link($1)})
+  end
+
+  def hashtag_link(tag)
+    link_to "##{tag}", spots_path(tag: tag)
+  end
 end
