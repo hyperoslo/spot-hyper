@@ -7,6 +7,10 @@ class Spot < ApplicationRecord
     self.tags = text.scan(/\B#\w+/).map{ |tag| tag.gsub('#', '') }
   end
 
+  def owner?(request_user_id)
+    user_id == request_user_id
+  end
+
   private
 
   def new_today?

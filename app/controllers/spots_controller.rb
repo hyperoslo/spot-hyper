@@ -21,10 +21,10 @@ class SpotsController < ApplicationController
   def destroy
     if params[:text].present?
       @spot = Spot.find_by(id: params[:text])
-      if @spot and @spot.destroy
+      if @spot and @spot.owner?(params[:user_id].to_i) and @spot.destroy
         render plain: "Deleted your spot##{@spot.id}: #{@spot.text}"
       else
-        render plain: "Your spot: #{params[:text]} not found. Try again :)"
+        render plain: "Your spot: #{params[:text]} not found or you are not the owner."
       end
     else
       render plain: "Please add your spot id to your command: /spotdel [id]"
