@@ -18,28 +18,34 @@ class SpotsController < ApplicationController
     end
   end
 
-  # GET /spots/user
- def user
-  if params[:command].present?
-    @spots = Spot.where(user_id: params[:user_id]).order(id: :desc)
-    render plain: "*Here are your past spots:* \n" + @spots.map{
-      |p|  "#{p.id}. " + p.text.delete("\n")
-    }.join("\n")
-  else
-    render nothing: true, status: :forbidden
+  def destroy
+    if params[:text].present?
+      @spot = Spot.find_by(id: params[:text])
+      if @spot and @spot.destroy
+        render plain: "Deleted your spot##{@spot.id}: #{@spot.text}"
+      else
+        render plain: "Your spot: #{params[:text]} not found. Try again :)"
+      end
+    else
+      render plain: "Please add your spot id to your command: /spotdel [id]"
+    end
   end
- end
 
   # POST /spots
   def create
-    render nothing: true, status: :ok and return unless responder.respond?
-    @spot = Spot.new(spot_params)
-    if params[:text].present? && @spot.save
-      render plain: responder.response.to_s +  ' .See your message on: ' + "#{root_url}#spot-#{@spot.id}"
+    if params[:command] == "/spotme"
+      render nothing: true, status: :ok and return unless responder.respond?
+      @spot = Spot.new(spot_params)
+      if params[:text].present? && @spot.save
+        render plain: responder.response.to_s +  ' .See your message on: ' + "#{root_url}#spot-#{@spot.id}"
+      else
+        render plain: "Please add a message to your command: /spotme [message]"
+      end
+    elsif params[:command] == "/spotdel"
+      destroy
     else
-      render plain: "Please add a message to your command: /spotme [message]"
+      render plain: "Command not found", status: :ok
     end
-
   end
 
   private
