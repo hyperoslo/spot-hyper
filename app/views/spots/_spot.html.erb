@@ -11,12 +11,6 @@
       </div>
       <div class="card-description">
         <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + render_with_hashtags(spot.text).html_safe %>
-        <%# Support this for old records #%>
-        <% if display_day(spot.created_at) == "yesterday" %>
-          <% spot.tags.each do |tag| %>
-            <%= link_to('#' + tag, spots_path(tag: tag), class: 'tag') %>
-          <% end %>
-        <% end %>
         <div class="via">
           via <%= spot.channel_name.capitalize %> On Slack
         </div>
