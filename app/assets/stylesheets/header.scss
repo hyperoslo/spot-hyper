@@ -50,6 +50,24 @@
     }
   }
 
+  @media (max-width: 2000px) {
+    .logo {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .logo {
+      width: 37%;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .logo {
+      width: 35%;
+    }
+  }
+
   @media (max-width: 800px) {
     .logo {
       width: 20%;
