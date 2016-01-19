@@ -3,6 +3,8 @@
   <head>
     <title>Spot Hyper</title>
     <meta name="description" content="Share where you are and what you are working on">
+    <link rel="dns-prefetch" href="https://s3-eu-west-1.amazonaws.com">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= favicon_link_tag 'favicon.ico' %>
@@ -19,7 +21,7 @@
   </head>
 
   <body>
-    <video id="bgvideo" loop="true" autoplay="true" muted>
+    <video id="bgvideo" loop="true" autoplay="true" muted preload="none">
       <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.mp4" type="video/mp4">
       <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.ogv" type="video/ogg">
       <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.webm" type="video/webm">
