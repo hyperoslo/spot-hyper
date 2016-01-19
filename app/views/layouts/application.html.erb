@@ -19,6 +19,11 @@
   </head>
 
   <body>
+    <video id="bgvideo" loop="true" autoplay="true">
+      <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.mp4" type="video/mp4">
+      <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.ogv" type="video/ogg">
+      <source src="https://s3-eu-west-1.amazonaws.com/hyper-production/videos/loop_v01_darker.webm" type="video/webm">
+    </video>
     <%= render partial: 'shared/header' %>
     <div class="container">
       <%= yield %>
