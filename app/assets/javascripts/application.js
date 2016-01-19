@@ -14,3 +14,8 @@
 //= require local_time
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  var vid = document.getElementById("bgvideo");
+  vid.playbackRate = 0.5;
+});
