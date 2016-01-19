@@ -10,7 +10,7 @@ Example: /spotme Working on #myshop #oslo #office
 ## Development
 ```
 git clone repo-url
-cd /directory 
+cd /directory
 bundle
 ./start (from terminal). If you get permission error, just do chmod 777 start
 ```
@@ -24,10 +24,6 @@ Spot Hyper requires the following softwares:
 
 The versions listed are tested and confirmed to work, but the software may also be
 compatible with earlier versions.
-
-## TODO
-* Pagination - infinite scroll
-* More filter option - day wise  
 
 ### Running
 ```bash
