@@ -16,7 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
+$(document).on('page:change', function(event) {
   var vid = document.getElementById("bgvideo");
+  vid.load();
   vid.playbackRate = 0.5;
+  vid.play();
 });

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119155029) do
+ActiveRecord::Schema.define(version: 20160120045404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 20160119155029) do
     t.text     "text"
     t.string   "user_name"
     t.integer  "user_id"
-    t.string   "tags",         default: [],              array: true
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "tags",         default: [],                 array: true
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "channel_name"
+    t.boolean  "awesome",      default: false
+    t.index ["awesome"], name: "index_spots_on_awesome", using: :btree
     t.index ["created_at"], name: "index_spots_on_created_at", using: :btree
     t.index ["tags"], name: "index_spots_on_tags", using: :gin
   end

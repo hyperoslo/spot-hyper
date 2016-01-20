@@ -19,9 +19,9 @@ class SpotsController < ApplicationController
   end
 
   def awesome
-    Spot.to_a.group_by_day(&:created_at).sort.reverse
+    @grouped_spots = Spot.unscoped.where(awesome: true).to_a.group_by_day(&:created_at).sort.reverse
     respond_to do |format|
-      format.html
+      format.html { render :index }
     end
   end
 

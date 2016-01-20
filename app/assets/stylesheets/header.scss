@@ -44,6 +44,8 @@
       li {
         display: inline-block;
         margin-right: 10px;
+        font-size: 17px;
+        text-transform: lowercase;
         a {
             text-decoration: none;
             &.active {
