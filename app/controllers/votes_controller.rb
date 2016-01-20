@@ -2,10 +2,10 @@ class VotesController < ApplicationController
   before_action :set_spot
 
   def create
-    if @spot.voted?(request.remote_ip)
+    if @spot.voted?(request.ip)
       destroy
     else
-      @vote = @spot.votes.create(ip: request.remote_ip)
+      @vote = @spot.votes.create(ip: request.ip)
       respond_to do |format|
         format.js
       end
@@ -13,7 +13,7 @@ class VotesController < ApplicationController
   end
 
   def destroy
-    @vote = @spot.votes.where(ip: request.remote_ip).first
+    @vote = @spot.votes.where(ip: request.ip).first
     if @vote and @vote.destroy
       respond_to do |format|
         format.js { render :create }
