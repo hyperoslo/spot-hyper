@@ -1,0 +1,6 @@
+<%= link_to(spot_votes_path(spot), remote: true, method: :post) do %>
+  <span class="vote">
+    <i class="icon-star"></i>
+    <%= spot.votes_count %>
+  </span>
+<% end %>

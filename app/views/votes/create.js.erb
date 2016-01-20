@@ -1,0 +1,3 @@
+// Find the spot and replace the content with new one
+var $spot_votes = $('#spot-votes-<%= @spot.id %>');
+$spot_votes.html("<%= j render partial: 'votes', locals: { spot: @spot } %>");
