@@ -1,6 +1,7 @@
 class SpotsController < ApplicationController
   skip_before_filter :verify_authenticity_token
   before_filter :verify_slack_token, except: [:index, :show, :awesome]
+  before_filter :get_client_ip, only: [:index, :awesome]
 
   # GET /spots
   def index
@@ -56,6 +57,10 @@ class SpotsController < ApplicationController
   end
 
   private
+
+    def get_client_ip
+      @ip = GetIP.new(request).remote_ip
+    end
 
     def spot_params
       params.permit(:user_id, :user_name, :text, :channel_name)
