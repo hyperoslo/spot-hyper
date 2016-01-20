@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :votes, only: :create
     collection do
       get :user
-      get :awesome
+      get '/hall-of-fame', to: 'spots#awesome', as: :awesome
     end
   end
   # Serve websocket cable requests in-process

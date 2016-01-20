@@ -1,13 +1,6 @@
 <div class="timeline-container center top-circle">
   <% if @grouped_spots.length > 0 %>
     <section class="timeline">
-      <% unless current_page?(root_path) %>
-        <div class="reset">
-          <%= link_to(root_path) do %>
-            <%= image_tag('load-icon.svg') %>
-          <% end %>
-        </div>
-      <% end %>
       <%= render partial: 'spots/spots', locals: {grouped_spots: @grouped_spots} %>
     </section>
   <% else %>
