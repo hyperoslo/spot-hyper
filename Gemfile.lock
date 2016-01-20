@@ -168,6 +168,8 @@ GEM
     redis (3.2.2)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    redis-objects (1.2.1)
+      redis (>= 3.0.2)
     redis-rack-cache (1.2.3)
       rack-cache (~> 1.2)
       redis-store (~> 1.1.0)
@@ -216,6 +218,7 @@ DEPENDENCIES
   autoprefixer-rails
   byebug
   coffee-rails (~> 4.1.0)
+  connection_pool
   figaro
   foreman
   groupdate
@@ -229,6 +232,7 @@ DEPENDENCIES
   rails_12factor
   readthis
   redis-namespace
+  redis-objects
   redis-rack-cache
   redis-store
   sass-rails

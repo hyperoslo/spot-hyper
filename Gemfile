@@ -17,6 +17,9 @@ gem 'jquery-rails'
 gem 'turbolinks', github: 'rails/turbolinks'
 # Use Puma as the app server
 gem 'puma'
+# redis objects
+gem 'connection_pool'
+gem 'redis-objects'
 
 # Background jobs
 gem 'sidekiq'
