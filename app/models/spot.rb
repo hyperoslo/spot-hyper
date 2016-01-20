@@ -18,7 +18,7 @@ class Spot < ApplicationRecord
   end
 
   def voted?(ip)
-    voter_ips.member?(ip)
+    voter_ips.member?(ip.to_s)
   end
 
   private
