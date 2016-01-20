@@ -9,6 +9,15 @@
 	position: relative;
 	width: 300px;
 	color: #fff;
+	.votes {
+		a {
+			color: #fff;
+			text-decoration: none;
+			i {
+				vertical-align: middle;
+			}
+		}
+	}
 	&.full-width{
 		width: 100% !important
 	}

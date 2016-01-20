@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require local_time
 //= require turbolinks
 //= require_tree .
