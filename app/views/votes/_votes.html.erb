@@ -1,3 +1,4 @@
+<%= request.ip %>
 <div id="spot-votes-<%= spot.id %>">
   <% if spot.voted?(request.ip) %>
     <%= render partial: 'votes/voted', locals: { spot: spot } %>
