@@ -8,12 +8,12 @@
         <h5>
           <%= local_time_ago(spot.created_at) %>
         </h5>
-      </div>
-      <div class="card-description">
-        <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + render_with_hashtags(spot.text).html_safe %>
         <div class="via">
           via <%= spot.channel_name.capitalize if spot.channel_name %> On Slack
         </div>
+      </div>
+      <div class="card-description">
+        <%= link_to('@' + spot.user_name, spots_path(name: spot.user_name)) + ': ' + render_with_hashtags(spot.text).html_safe %>
       </div>
       <div class="votes">
         <%= render partial: 'votes/votes', locals: { spot: spot } %>

@@ -37,6 +37,7 @@
       margin: 0;
       letter-spacing: -0.006em;
       margin-top: -3px;
+			display: inline-block;
     }
     h6 {
     	font-size: 12px;
@@ -44,6 +45,14 @@
       opacity: .45;
       font-family: arial;
       opacity: .45;
+    }
+    .via {
+      opacity: .45;
+      display: block;
+      font-size: 12px;
+			float: right;
+      font-family: arial;
+      margin-top: 5px;
     }
   }
   .card-description {
@@ -58,14 +67,6 @@
     	text-decoration: none;
     	font-weight: 600;
 			color: #f57d2d;
-    }
-    .via {
-      opacity: .45;
-      display: block;
-      font-size: 12px;
-			float: right;
-      font-family: arial;
-      margin-top: 5px;
     }
   }
 	@media (max-width: 580px) {
