@@ -7,11 +7,7 @@ class GetIP
   end
 
   def remote_ip
-    if forwarded = request.env["HTTP_X_FORWARDED_FOR"]
-      forwarded.split(",").first
-    elsif addr = request.env["REMOTE_ADDR"]
-      addr
-    end
+    request.env["HTTP_X_FORWARDED_FOR"].try(:split, ',').try(:last) || request.env["REMOTE_ADDR"
   end
-  
+
 end

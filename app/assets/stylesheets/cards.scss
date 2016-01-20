@@ -13,8 +13,16 @@
 		a {
 			color: #fff;
 			text-decoration: none;
-			i {
-				vertical-align: middle;
+			.vote {
+				display: table;
+				i {
+					vertical-align: middle;
+					display: table-cell;
+					padding-right: 5px;
+				}
+				.count {
+					  display: table-cell;
+				}
 			}
 		}
 	}
@@ -55,6 +63,7 @@
       opacity: .45;
       display: block;
       font-size: 12px;
+			float: right;
       font-family: arial;
       margin-top: 5px;
     }
