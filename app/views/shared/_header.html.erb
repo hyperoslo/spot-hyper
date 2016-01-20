@@ -18,6 +18,11 @@
           %>
         <% end %>
         <%= content_tag :li do %>
+          <%= link_to('Awesome', awesome_spots_path,
+            class: "#{current_page?(awesome_spots_path) ? 'active' : ''}")
+          %>
+        <% end %>
+        <%= content_tag :li do %>
           <%= link_to('Remote', spots_path(tag: 'remote'),
             class: "#{current_page?(spots_path(tag: 'remote')) ? 'active' : ''}")
           %>

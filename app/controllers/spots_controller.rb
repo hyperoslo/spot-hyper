@@ -1,6 +1,6 @@
 class SpotsController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  before_filter :verify_slack_token, except: [:index, :show]
+  before_filter :verify_slack_token, except: [:index, :show, :awesome]
 
   # GET /spots
   def index
@@ -13,6 +13,13 @@ class SpotsController < ApplicationController
       Spot.all.to_a.group_by_day(&:created_at).sort.reverse
     end
 
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  def awesome
+    Spot.to_a.group_by_day(&:created_at).sort.reverse
     respond_to do |format|
       format.html
     end
