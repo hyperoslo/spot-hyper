@@ -1,6 +1,6 @@
 class HangoutsController < ApplicationController
   include VerifySlackToken
-  before_action :find_hangout, on: :create
+  before_action :find_hangout, except: :user
 
   # POST /hangouts
   def create
@@ -9,7 +9,7 @@ class HangoutsController < ApplicationController
     if @hangout.blank? and params[:text].present?
       @hangout = create_hangout
       if @hangout.save
-        render plain: t(:create_hangout, user_name: params[:user_name], url: params[:text])
+        render plain: t(:create_hangout, user_name: params[:user_name], url: @hangout.url)
       else
         render plain: "Error: #{@hangout.errors.full_messages.to_sentence}"
       end

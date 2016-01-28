@@ -3,8 +3,8 @@
 en:
   no_hangout: "@%{user_name}: You have no associated hangout present.
   Please create one by passing a hangout link like so: `/myhangout [google_hangout_link]`"
-  update_hangout:  "@%{user_name}: Your permanent hangout link: %{url} is updated"
-  create_hangout: "@%{user_name}: Your hangout link: %{url} is added as your permanenent hangout.
+  update_hangout:  "@%{user_name}: Your permanent hangout short url: %{url} is updated"
+  create_hangout: "@%{user_name}: Your hangout short url: %{url} is added as your permanenent hangout.
   If you change this link, simply re-run the previous command with a new link"
   your_hangout: "@%{user_name}: Your permanent hangout link is: %{url}"
   user_hangout: "%{name}: permanent hangout url is: %{url}"
