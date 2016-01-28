@@ -36,7 +36,7 @@ gem 'groupdate'
 # Caching
 gem 'readthis'
 gem 'hiredis' # Highly recommended
-
+gem 'em-hiredis'
 gem 'rack-cache'
 gem 'redis-store'
 gem 'redis-rack-cache'
