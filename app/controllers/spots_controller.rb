@@ -1,6 +1,5 @@
 class SpotsController < ApplicationController
-  skip_before_filter :verify_authenticity_token
-  before_filter :verify_slack_token, except: [:index, :show, :awesome]
+  include VerifySlackToken
   before_filter :get_client_ip, only: [:index, :awesome]
 
   # GET /spots
@@ -43,7 +42,7 @@ class SpotsController < ApplicationController
   def create
     if params[:command] == "/spotme"
       render nothing: true, status: :ok and return unless responder.respond?
-      @spot = Spot.new(spot_params)
+      @spot = Spot.new(slack_params)
       if params[:text].present? && @spot.save
         render plain: responder.response.to_s +  ' .See your message on: ' + "#{root_url}#spot-#{@spot.id}"
       else
@@ -57,21 +56,7 @@ class SpotsController < ApplicationController
   end
 
   private
-
-    def get_client_ip
-      @ip = GetIP.new(request).remote_ip
-    end
-
-    def spot_params
-      params.permit(:user_id, :user_name, :text, :channel_name)
-    end
-
-    # Setup slack responder
-    def responder
-      @responder ||= Slack::Response.new(params[:text])
-    end
-
-    def verify_slack_token
-      render nothing: true, status: :forbidden and return unless Slack::TOKENS.include?(params[:token])
-    end
+  def get_client_ip
+    @ip = GetIP.new(request).remote_ip
+  end
 end
