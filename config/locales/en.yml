@@ -6,6 +6,6 @@ en:
   update_hangout:  "@%{user_name}: Your permanent hangout short url: %{url} is updated"
   create_hangout: "@%{user_name}: Your hangout short url: %{url} is added as your permanenent hangout.
   If you change this link, simply re-run the previous command with a new link"
-  your_hangout: "@%{user_name}: Your permanent hangout link is: %{url} Click the link to join"
-  user_hangout: "%{name}: permanent hangout url is: %{url} Click the link to join"
+  your_hangout: "@%{user_name}: Your permanent hangout link is: %{url}"
+  user_hangout: "%{name}: permanent hangout url is: %{url}"
   no_user_hangout: "%{name}: has no associated hangout url present or `%{name}` username not present."
