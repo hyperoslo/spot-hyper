@@ -2,7 +2,7 @@ module VerifySlackToken
   extend ActiveSupport::Concern
   included do
     skip_before_action :verify_authenticity_token
-    before_filter :verify_slack_token, except: [:index, :show, :awesome]
+    before_action :verify_slack_token, except: [:index, :show, :awesome]
   end
 
   private
