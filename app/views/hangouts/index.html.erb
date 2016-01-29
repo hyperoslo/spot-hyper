@@ -2,13 +2,13 @@
   Find Team permanent hangouts
 <% end %>
 <div class="hangouts-container">
-  <% @hangouts.each do |hangout| %>
+  <% @hangouts.each.with_index(1) do |hangout, index| %>
     <div class="card full-width">
       <div class="card-description">
         <h5>
-          <%= hangout.user_name.capitalize %>
+          <%= index %>. <%= hangout.user_name.capitalize %>
         </h5>
-        <%= link_to('Join', hangout.url, target: '_blank') %>
+        <%= link_to('Join hangout', hangout.url, target: '_blank') %>
       </div>
     </div>
   <% end %>

@@ -4,7 +4,7 @@ class HangoutsController < ApplicationController
 
   # GET /hangouts
   def index
-    @hangouts = Hangout.all
+    @hangouts = Hangout.all.to_a.sort_by!{ |h| h.user_name.downcase }
   end
 
   # POST /hangouts
