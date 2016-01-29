@@ -1,0 +1,45 @@
+/*
+  Module: Timeline
+*/
+
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+
+.hangouts-container {
+  width: 50%;
+  margin: 50px auto;
+  position: relative;
+  min-height: 300px;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .card {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    .card-description {
+      padding: 10px 20px;
+      a {
+        color: #333;
+        background: #fff;
+        padding: 5px 10px;
+        float: right;
+      }
+    }
+    h5 {
+      display: inline-block;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+	.hangouts-container {
+    width: 100%;
+	}
+}

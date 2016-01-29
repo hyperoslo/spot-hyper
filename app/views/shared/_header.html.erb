@@ -8,7 +8,7 @@
       <% end %>
     </div>
     <div class="brand-description">
-      <h3>Share where you are and what you are working on</h3>
+      <h3><%= @description %></h3>
     </div>
     <div class="filters">
       <%= content_tag :ul do %>
@@ -18,8 +18,8 @@
           %>
         <% end %>
         <%= content_tag :li do %>
-          <%= link_to('Awesome', awesome_spots_path,
-            class: "#{current_page?(awesome_spots_path) ? 'active' : ''}")
+          <%= link_to('Hangouts', hangouts_path,
+            class: "#{current_page?(hangouts_path) ? 'active' : ''}")
           %>
         <% end %>
         <%= content_tag :li do %>
@@ -27,11 +27,6 @@
             class: "#{current_page?(spots_path(tag: 'remote')) ? 'active' : ''}")
           %>
         <% end %>
-        <%= content_tag :li do %>
-          <%= link_to('Office', spots_path(tag: 'office'),
-              class: "#{current_page?(spots_path(tag: 'office')) ? 'active' : ''}")
-          %>
-       <% end %>
        <%= content_tag :li do %>
          <%= link_to('Sick', spots_path(tag: 'sick'),
            class: "#{current_page?(spots_path(tag: 'sick')) ? 'active' : ''}")

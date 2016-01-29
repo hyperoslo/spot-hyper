@@ -64,12 +64,14 @@ video#bgvideo {
 	}
 }
 .no-content {
-  max-width: 170px;
+  max-width: 300px;
   margin: 0 auto;
   font-size: 40px;
+  text-align: center;
   padding: 150px 0;
   color: #f57d2d;
   z-index: 1020;
+  min-height: 150px;
   position: relative;
 }
 .container {

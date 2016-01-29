@@ -1,6 +1,11 @@
 class HangoutsController < ApplicationController
   include VerifySlackToken
-  before_action :find_hangout, except: :user
+  before_action :find_hangout, only: :create
+
+  # GET /hangouts
+  def index
+    @hangouts = Hangout.all
+  end
 
   # POST /hangouts
   def create

@@ -1,11 +1,14 @@
-<div class="timeline-container center top-circle">
+<% @description = capture do %>
+  Spot team members and what they are on today
+<% end %>
+<div class="timeline-container center">
   <% if @grouped_spots.length > 0 %>
     <section class="timeline">
       <%= render partial: 'spots/spots', locals: {grouped_spots: @grouped_spots} %>
     </section>
   <% else %>
     <div class="no-content">
-      <h3>No spots</h3>
+      <h3>No team spots</h3>
     </div>
   <% end %>
 </div>

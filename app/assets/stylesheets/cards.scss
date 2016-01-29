@@ -9,6 +9,11 @@
 	position: relative;
 	width: 300px;
 	color: #fff;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 	.votes {
 		a {
 			color: #fff;

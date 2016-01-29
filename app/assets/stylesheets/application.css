@@ -17,6 +17,7 @@
  *= require header
  *= require footer
  *= require mixins
+ *= require hangouts
  *= require cards
  *= require timeline
  *= require_self

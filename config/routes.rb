@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :hangouts, only: :create do
+  resources :hangouts, only: [:index, :create] do
     collection do
       post :user
     end
