@@ -44,6 +44,8 @@ gem 'redis-rack-cache'
 # Autoprefixer
 gem 'autoprefixer-rails'
 
+gem 'bitly'
+
 # Heroku
 gem 'rails_12factor', group: :production
 

@@ -1,23 +1,11 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# Default translations
 
 en:
-  hello: "Hello world"
+  no_hangout: "@%{user_name}: You have no associated hangout present.
+  Please create one by passing a hangout link like so: `/myhangout [google_hangout_link]`"
+  update_hangout:  "@%{user_name}: Your permanent hangout short url: %{url} is updated"
+  create_hangout: "@%{user_name}: Your hangout short url: %{url} is added as your permanenent hangout.
+  If you change this link, simply re-run the previous command with a new link"
+  your_hangout: "@%{user_name}: Your permanent hangout link is: %{url}. Click the link to join"
+  user_hangout: "%{name}: permanent hangout url is: %{url}. Click the link to join"
+  no_user_hangout: "%{name}: has no associated hangout url present or `%{name}` username not present."
