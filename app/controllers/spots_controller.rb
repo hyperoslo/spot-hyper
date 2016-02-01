@@ -44,7 +44,7 @@ class SpotsController < ApplicationController
       render nothing: true, status: :ok and return unless responder.respond?
       @spot = Spot.new(slack_params)
       if params[:text].present? && @spot.save
-        render plain: responder.response.to_s +  ' .See your message on: ' + "#{root_url}#spot-#{@spot.id}"
+        render plain: "#{responder.response}. See your message on #{root_url}#spot-#{@spot.id}"
       else
         render plain: "Please add a message to your command: /spotme [message]"
       end
