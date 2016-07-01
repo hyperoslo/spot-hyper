@@ -2,7 +2,6 @@ class Spot < ApplicationRecord
   include Redis::Objects
   AWESOME_VOTES = 10
   has_many :votes
-  default_scope { where("created_at >= ?", 2.days.ago.utc).order(created_at: :desc) }
   before_create :create_tags
   after_create_commit { UpdateStatusJob.perform_later(self) unless new_today? }
 

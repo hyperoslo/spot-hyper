@@ -1,8 +1,10 @@
 <% grouped_spots.each do |date, spots| %>
-  <div class="timespan" id="<%= display_day(date) %>">
-    <div class="span">
-      <h3><%=  local_relative_time(date, 'weekday') %></h3>
+  <% if spots.length > 0 %>
+    <div class="timespan" id="<%= display_day(date) %>">
+      <div class="span">
+        <h3><%=  local_relative_time(date, type: 'time-or-date') %></h3>
+      </div>
+      <%= render partial: 'spots/spot', collection: spots %>
     </div>
-    <%= render partial: 'spots/spot', collection: spots %>
-  </div>
+  <% end %>
 <% end %>
