@@ -22,3 +22,11 @@ $(document).on('page:change', function(event) {
   vid.playbackRate = 0.5;
   vid.play();
 });
+
+$(document).on('scroll', function(event){
+  if ($(document).scrollTop() > 100) {
+    $('.header').addClass('scrolling');
+  } else {
+    $('.header').removeClass('scrolling');
+  }
+});
